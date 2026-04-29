@@ -57,13 +57,14 @@ dataset/raw/
 
 ## 📊 Results
 
-| Model         | Accuracy | Precision | Recall | F1 Score |
-| ------------- | -------- | --------- | ------ | -------- |
-| Random Forest | ~0.99    | ~0.99     | ~0.99  | ~0.99    |
-| SVM           | ~0.99    | ~0.99     | ~0.99  | ~0.99    |
+| Model          | Accuracy | Precision | Recall | F1 Score |
+|---------------|----------|----------|--------|----------|
+| Random Forest | 0.9963   | 0.9964   | 0.9963 | 0.9963   |
+| SVM           | 0.9988   | 0.9988   | 0.9988 | 0.9988   |
 
-* Strong performance across all classes
-* Minimal misclassification
+- Strong performance across all cancer types  
+- Minimal misclassification  
+- Validated using 5-fold cross-validation
 
 ---
 
@@ -131,6 +132,7 @@ project/
 ├── .gitignore                 # Ignored files (env, dataset, etc.)
 ├── README.md                  # Project documentation
 └── requirements.txt           # Dependencies
+
 ```
 
 ---
