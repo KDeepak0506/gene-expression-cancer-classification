@@ -115,7 +115,7 @@ dataset/raw/
 ### 📊 SVM Confusion Matrix
 
 <p align="center">
-  <img src="results/svm_confusion_matrix.png" width="100%">
+  <img src="results/svm_confusion_matrix.png" width="70%">
 </p>
 
 ---
