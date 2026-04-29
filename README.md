@@ -4,6 +4,8 @@
 ![Machine Learning](https://img.shields.io/badge/Machine%20Learning-Project-green)
 ![Accuracy](https://img.shields.io/badge/Accuracy-99.88%25-brightgreen)
 
+🔗 **GitHub Repository:** https://github.com/KDeepak0506/gene-expression-cancer-classification
+
 ---
 
 ## 📌 Overview
@@ -11,8 +13,33 @@
 This project explores how machine learning can classify different cancer types 
 using high-dimensional RNA-Seq gene expression data (~20,000 features per sample).
 
-It focuses on understanding how feature selection and dimensionality reduction 
-impact model performance in complex biological datasets.
+The focus is on understanding how **feature selection** and **dimensionality reduction**
+impact performance in complex biological datasets.
+
+---
+
+## ⚡ Quick Start
+
+```bash
+git clone https://github.com/KDeepak0506/gene-expression-cancer-classification.git
+cd gene-expression-cancer-classification
+pip install -r requirements.txt
+
+# Train model
+python -m src.train
+
+# Evaluate model
+python -m src.evaluate
+```
+
+---
+
+## 🛠 Tech Stack
+
+- Python  
+- scikit-learn  
+- pandas, numpy  
+- matplotlib, seaborn  
 
 ---
 
@@ -27,7 +54,9 @@ https://archive.ics.uci.edu/dataset/401/gene+expression+cancer+rna+seq
 
 After downloading, place it in:
 
+```
 dataset/raw/
+```
 
 ---
 
@@ -47,7 +76,7 @@ dataset/raw/
 - ✅ Feature importance analysis  
 - ✅ Feature selection (SelectKBest + VarianceThreshold)  
 - ✅ Near-perfect classification performance (~99.8% with SVM)  
-- ✅ Industry-style modular project structure  
+- ✅ Modular and production-style project structure  
 
 ---
 
@@ -82,6 +111,8 @@ dataset/raw/
 
 ### 📌 PCA Visualization (Cluster Formation)
 
+Shows how high-dimensional gene expression data forms clearly separable clusters after dimensionality reduction.
+
 <p align="center">
   <img src="results/Cluster_Formation_of_Classes.png" width="70%">
 </p>
@@ -89,6 +120,8 @@ dataset/raw/
 ---
 
 ### 📉 Feature Selection vs Accuracy
+
+Illustrates how model performance remains stable even after drastically reducing the number of genes.
 
 <p align="center">
   <img src="results/feature_vs_accuracy.png" width="70%">
@@ -98,6 +131,8 @@ dataset/raw/
 
 ### 📊 Class Distribution
 
+Displays the distribution of different cancer types in the dataset.
+
 <p align="center">
   <img src="results/Class_Distribution.png" width="70%">
 </p>
@@ -105,6 +140,8 @@ dataset/raw/
 ---
 
 ### 📊 Random Forest Confusion Matrix
+
+Shows prediction performance across all classes, with most values concentrated along the diagonal.
 
 <p align="center">
   <img src="results/rf_confusion_matrix.png" width="70%">
@@ -114,6 +151,8 @@ dataset/raw/
 
 ### 📊 SVM Confusion Matrix
 
+Demonstrates near-perfect classification with extremely low misclassification.
+
 <p align="center">
   <img src="results/svm_confusion_matrix.png" width="70%">
 </p>
@@ -122,11 +161,13 @@ dataset/raw/
 
 ## 🔍 Interpretation
 
-- High accuracy even with fewer genes → strong signal in data  
-- PCA shows clear cluster separation  
-- Feature selection reduces dimensionality without loss  
-- Models generalize well across all classes  
-- Class imbalance has minimal effect  
+- High accuracy even with fewer genes → strong predictive signal  
+- PCA reveals clear cluster separation → highly distinguishable data  
+- Feature selection significantly reduces dimensionality  
+- Models generalize well across all cancer types  
+- Class imbalance has minimal impact  
+
+> 💡 **Key Insight:** A small subset of genes is sufficient to achieve near-perfect classification, indicating strong biological patterns in gene expression data.
 
 ---
 
@@ -167,14 +208,6 @@ project/
 
 ---
 
-## ⚙️ Installation
-
-```bash
-pip install -r requirements.txt
-```
-
----
-
 ## ▶️ Usage
 
 ### Train Models
@@ -205,10 +238,10 @@ python -m src.feature_selection
 ## 🔍 Key Learnings
 
 - Feature selection is critical for high-dimensional data  
-- PCA reveals hidden structure  
-- Simple models can perform extremely well  
+- PCA helps uncover hidden structure  
+- Simple models can achieve strong performance  
 - Cross-validation improves reliability  
-- Clean structure improves scalability  
+- Clean architecture improves scalability  
 
 ---
 
@@ -216,9 +249,9 @@ python -m src.feature_selection
 
 - Add XGBoost / LightGBM  
 - Use SHAP for explainability  
-- Hyperparameter tuning  
-- Deploy using FastAPI  
-- Use larger datasets (TCGA)  
+- Perform hyperparameter tuning  
+- Deploy as a web API (FastAPI/Flask)  
+- Use larger datasets (e.g., TCGA)  
 
 ---
 
