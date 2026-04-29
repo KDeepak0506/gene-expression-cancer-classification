@@ -1,4 +1,4 @@
-# 🧬 Gene Expression Cancer Classification
+# 🧬 Cancer Classification from RNA-Seq Gene Expression 
 
 ## 📌 Overview
 
