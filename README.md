@@ -34,7 +34,7 @@ dataset/raw/
 * ✅ Cross-validation for robust evaluation
 * ✅ Feature importance analysis
 * ✅ Feature selection (SelectKBest + VarianceThreshold)
-* ✅ High-accuracy classification (~99%)
+* ✅ Near-perfect classification performance (~99.8% with SVM)
 * ✅ Industry-style project structure
 
 ---
@@ -70,6 +70,18 @@ dataset/raw/
 
 ## 📊 Visualizations
 
+### 📌 PCA Visualization (Cluster Formation)
+
+Visualization of high-dimensional gene expression data after dimensionality reduction using PCA.
+
+Clear clusters indicate strong separability between cancer types.
+
+<p align="center">
+  <img src="results/Cluster_Formation_of_Classes.png" width="600">
+</p>
+
+---
+
 ### 📉 Feature Selection vs Accuracy
 
 This plot shows how model performance changes with the number of selected genes.
@@ -90,12 +102,25 @@ Distribution of different cancer types in the dataset.
 
 ---
 
+### 📊 Confusion Matrix
+
+Shows model performance across all cancer classes.
+
+Most predictions lie on the diagonal, indicating near-perfect classification with minimal misclassification.
+
+<p align="center">
+  <img src="results/rf_confusion_matrix.png" width="600">
+</p>
+
+---
+
 ## 🔍 Interpretation
 
-* Accuracy remains high even with fewer genes → strong signal in data
-* Feature selection reduces dimensionality significantly
-* Model generalizes well across classes
-* Slight class imbalance handled effectively
+* High accuracy is achieved even with fewer genes → strong predictive signal in the data  
+* PCA reveals clear cluster separation → underlying structure is highly distinguishable  
+* Feature selection significantly reduces dimensionality without performance loss  
+* Models generalize well across all cancer types  
+* Slight class imbalance has minimal impact on performance  
 
 ---
 
