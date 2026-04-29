@@ -40,7 +40,7 @@ with plt.style.context(mpx.styles.dracula):
     plt.xlabel("Predicted Label")
     plt.ylabel("True Label")
     plt.tight_layout()
-    plt.savefig("results/rf_confusion_matrix.png", bbox_inches='tight')
+    plt.savefig("results/rf_confusion_matrix.png", dpi=300, bbox_inches='tight')
     plt.close()
 
 rf_text = f"""
@@ -78,7 +78,7 @@ with plt.style.context(mpx.styles.dracula):
     plt.xlabel("Predicted Label")
     plt.ylabel("True Label")
     plt.tight_layout()
-    plt.savefig("results/svm_confusion_matrix.png", bbox_inches='tight')
+    plt.savefig("results/svm_confusion_matrix.png", dpi=300, bbox_inches='tight')
     plt.close()
 
 svm_text = f"""
