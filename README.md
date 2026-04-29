@@ -16,6 +16,15 @@ using high-dimensional RNA-Seq gene expression data (~20,000 features per sample
 The focus is on understanding how **feature selection** and **dimensionality reduction**
 impact performance in complex biological datasets.
 
+> 🚀 Achieved **~99.88% accuracy** using classical ML models on ~20,000-dimensional biological data.
+
+---
+
+## ❓ Problem Statement
+
+Can we accurately classify cancer types using high-dimensional gene expression data,  
+and how does dimensionality reduction impact model performance?
+
 ---
 
 ## ⚡ Quick Start
@@ -58,6 +67,8 @@ After downloading, place it in:
 dataset/raw/
 ```
 
+> ⚠️ Ensure the dataset structure matches what is expected in `data_loader.py`.
+
 ---
 
 ## 🎯 Objectives
@@ -75,7 +86,8 @@ dataset/raw/
 - ✅ Cross-validation for robust evaluation  
 - ✅ Feature importance analysis  
 - ✅ Feature selection (SelectKBest + VarianceThreshold)  
-- ✅ Near-perfect classification performance (~99.8% with SVM)  
+- ✅ PCA for dimensionality reduction and visualization  
+- ✅ Near-perfect classification performance (~99.88% with SVM)  
 - ✅ Modular and production-style project structure  
 
 ---
@@ -105,13 +117,15 @@ dataset/raw/
 - Minimal misclassification  
 - Validated using 5-fold cross-validation  
 
+> 📌 Metrics are computed using cross-validation for reliable performance estimation.
+
 ---
 
 ## 📊 Visualizations
 
 ### 📌 PCA Visualization (Cluster Formation)
 
-Shows how high-dimensional gene expression data forms clearly separable clusters after dimensionality reduction.
+Shows how high-dimensional gene expression data is projected into lower dimensions, revealing clearly separable clusters.
 
 <p align="center">
   <img src="results/Cluster_Formation_of_Classes.png" width="70%">
@@ -161,13 +175,14 @@ Demonstrates near-perfect classification with extremely low misclassification.
 
 ## 🔍 Interpretation
 
-- High accuracy even with fewer genes → strong predictive signal  
-- PCA reveals clear cluster separation → highly distinguishable data  
-- Feature selection significantly reduces dimensionality  
+- High accuracy even after feature reduction → strong signal concentration in a subset of genes  
+- PCA reveals clearly separable clusters → highly structured data  
+- Feature selection reduces ~20,000 features significantly without performance loss  
 - Models generalize well across all cancer types  
-- Class imbalance has minimal impact  
+- Class imbalance has negligible impact  
 
-> 💡 **Key Insight:** A small subset of genes is sufficient to achieve near-perfect classification, indicating strong biological patterns in gene expression data.
+> 💡 **Key Insight:** Only a small subset of genes is required for accurate cancer classification,  
+making feature selection a critical step in high-dimensional biological data.
 
 ---
 
@@ -210,20 +225,9 @@ project/
 
 ## ▶️ Usage
 
-### Train Models
-```bash
-python -m src.train
-```
-
-### Evaluate Models
-```bash
-python -m src.evaluate
-```
-
-### Feature Selection
-```bash
-python -m src.feature_selection
-```
+- `src.train` → Trains the machine learning models  
+- `src.evaluate` → Evaluates model performance and generates metrics + confusion matrices  
+- `src.feature_selection` → Runs feature selection experiments and analysis  
 
 ---
 
